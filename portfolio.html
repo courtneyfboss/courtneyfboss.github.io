@@ -1,12 +1,140 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+    
     <head>
-
+        <title>Courtney's Website</title>
     </head>
+     <style>
+        body {
+            background: rgb(103, 144, 121);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #all-contents {
+          max-width: 800px;
+            margin: auto;
+        }
+     
+        /* navigation menu */
+        nav {
+            background: linear-gradient(to right, white, pink, white);
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: flex;
+            padding: 10px;
+            border-radius: 25px;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+            color: black;
+            flex: 1;
+            margin: 0;
+        }
+        #nav-ul {
+            list-style-image: none;
+        }
+    
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+            border-radius: 25px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+     
+        /* main container area beneath menu */
+        main {
+            background: rgb(255, 255, 255);
+            display: flex;
+            border-radius: 25px;
+        }
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+        .sidebar-img {
+            width: 200px;
+            border-radius: 25px;
+        }
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+        #interests {
+            border: 4px silver ridge;
+            padding: 8px;
+            border-radius: 25px;
+        }
+        h2, h3 {
+            margin: 0px;
+        }
+
+         /* portfolio styles */
+         .content h1 {
+             color: black;
+         }
+         
+         #portfolio {
+             list-style-type: none;
+             padding-left: 0;
+         }
+         
+         #portfolio li {
+             background: #fff;
+             padding: 10px;
+             border-radius: 10px;
+             margin-bottom: 10px;
+         }
+         
+         #portfolio li:hover {
+             background: pink;
+         } 
+         
+         #portfolio a {
+             text-decoration: none;
+             color: black;
+         }
+        
+     </style>
 
     <body>
-        <div id="all-contents">
+        
+        <!--Visible HTML elements go here-->
             
-        </div>
+        <div id="all-contents">
+        
+            <!-- All content goes here -->
+            
+            <nav>
+                    <h1>All About Courtney Boss</h1>
+                    <ul id="nav-ul">
+                        
+                        <li class="nav-li">
+                            <a href="index.html"> Home </a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="portfolio.html"> Portfolio </a>
+                        </li>
+                    </ul> 
+            </nav>
+
+            <!-- Nav stuff here...-->
+            <main>
+                <div class="content">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                    <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure game for Halleb0t</a></li>
+                    <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game development on the web </a></li>
+                    <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and velocity applied to circle shapes...</a></li>
+                </ul>    
+                
+            </div>
+            </main>
+           
+               
     </body>
 </html>
