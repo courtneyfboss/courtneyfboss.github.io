@@ -45,11 +45,11 @@
 
 
         // example:
-        createPlatform(150, 600, 0.8);
+        createPlatform(150, 600, 0.8); // bottom platform
         createPlatform(650, 550, 0.8);
         createPlatform(300, 475, 0.8);
         createPlatform(400, 350, 0.8);
-        createPlatform(200, 250, 0.8);
+        createPlatform(200, 250, 0.8); // top platform
 
 
 
