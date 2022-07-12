@@ -20,13 +20,30 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-
+        var cirlce;
+        var circles = [];
 
         // TODO 2 : Create a function that draws a circle 
-        
+        var drawCircle = function(){
+
+            // create the circle
+            randomCircleInArea(area, randomizeAlpha, addCross, borderColor, borderThickness, randomRadialProps)
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            
+            // set motion properties
+            physikz.addRandomVelocity(circle, canvas);
+
+            // add the circle to circles arraw, add to view
+            circles.push(circle);
+            view.addChild(circle);
+        }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -37,12 +54,16 @@ var init = function (window) {
         In each frame, for every circle, it should redraw that circle
         and check to see if it has drifted off the screen.         
         */
-        function update() {
+        var update = function () {
             // TODO 4 : Update the circle's position //
-
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           
+           game.checkCirclePosition()
 
             // TODO 9 : Iterate over the array
            
