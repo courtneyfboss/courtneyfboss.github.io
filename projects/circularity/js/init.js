@@ -31,7 +31,7 @@ var init = function (window) {
             circle = draw.randomCircleInArea(canvas, true, false, '#000', 1);
 
             // set motion properties
-            physikz.addRandomVelocity(circle, canvas, 5, 5);
+            physikz.addRandomVelocity(circle, canvas, 10, 10);
 
             // add the circle to circles arraw, add to view
             circles.push(circle);
@@ -46,7 +46,7 @@ var init = function (window) {
         // drawCircle();
 
         var loopsCompleted = 0;
-        while (loopsCompleted < 100){
+        while (loopsCompleted < 100) {
             drawCircle();
             loopsCompleted++;
         }
@@ -59,7 +59,7 @@ var init = function (window) {
         In each frame, for every circle, it should redraw that circle
         and check to see if it has drifted off the screen.         
         */
-        var update = function () {
+        function update() {
             // TODO 4 : Update the circle's position //
             // physikz.updatePosition(circles[0]);
             // physikz.updatePosition(circles[1]);
@@ -67,29 +67,30 @@ var init = function (window) {
             // physikz.updatePosition(circles[3]);
             // physikz.updatePosition(circles[4]);
 
-            for (var i = 0; i < circles.length; i++){
-                circles[i] = physikz.updatePosition(circles[i]) + 1;
+            for (var a = 0; a < circles.length; a++) {
+                physikz.updatePosition(circles[a]);
+                game.checkCirclePosition(circles[a]);
             }
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
             // game.checkCirclePosition()
 
-            canvas.width
-            canvas.height
-            circle.x
-            circle.y
-            circle.radius
+            // canvas.width
+            // canvas.height
+            // circle.x
+            // circle.y
+            // circle.radius
 
-            game.checkCirclePosition(circles[0])
-            game.checkCirclePosition(circles[1])
-            game.checkCirclePosition(circles[2])
-            game.checkCirclePosition(circles[3])
-            game.checkCirclePosition(circles[4])
+            // game.checkCirclePosition(circles[0])
+            // game.checkCirclePosition(circles[1])
+            // game.checkCirclePosition(circles[2])
+            // game.checkCirclePosition(circles[3])
+            // game.checkCirclePosition(circles[4])
 
             // TODO 9 : Iterate over the array
-            for (var i = 0; i < game.checkCirclePosition.length; i++) {
-                game.checkCirclePosition(circles[i]);
-            }
+            // for (var i = 0; i < circles.length; i++) {
+
+            // }
 
         }
 
@@ -98,13 +99,13 @@ var init = function (window) {
         Function. If that circle drifts off the screen, this Function should move
         it to the opposite side of the screen.
         */
+
         game.checkCirclePosition = function (circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if (circle.x > canvas.width) {
                 circle.x = 0;
             }
-
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             if (circle.x < 0) {
                 circle.x = canvas.width;
